@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F8EF7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B5CF0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="120" fill="#0A0A0F" rx="12"/>
+
+  <!-- Symbol: Stylized AI node network forming "A" -->
+  <g transform="translate(20, 15)">
+    <!-- Main A shape outline -->
+    <polygon points="45,5 85,85 65,85 55,60 35,60 25,85 5,85" 
+             fill="none" stroke="url(#grad1)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Crossbar -->
+    <line x1="32" y1="58" x2="58" y2="58" stroke="url(#grad1)" stroke-width="2.5"/>
+
+    <!-- Network nodes -->
+    <circle cx="45" cy="5" r="4" fill="#4F8EF7" filter="url(#glow)"/>
+    <circle cx="5" cy="85" r="3.5" fill="#7B5CF0" filter="url(#glow)"/>
+    <circle cx="85" cy="85" r="3.5" fill="#7B5CF0" filter="url(#glow)"/>
+    <circle cx="32" cy="58" r="3" fill="#00D4FF" filter="url(#glow)"/>
+    <circle cx="58" cy="58" r="3" fill="#00D4FF" filter="url(#glow)"/>
+    <circle cx="25" cy="85" r="2.5" fill="#4F8EF7"/>
+    <circle cx="65" cy="85" r="2.5" fill="#4F8EF7"/>
+    <circle cx="55" cy="60" r="2.5" fill="#4F8EF7"/>
+    <circle cx="35" cy="60" r="2.5" fill="#4F8EF7"/>
+
+    <!-- Extra network connections -->
+    <line x1="45" y1="5" x2="32" y2="58" stroke="#4F8EF7" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="45" y1="5" x2="58" y2="58" stroke="#4F8EF7" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="32" y1="58" x2="5" y2="85" stroke="#7B5CF0" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="58" y1="58" x2="85" y2="85" stroke="#7B5CF0" stroke-width="0.8" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="130" y="52" font-family="'Arial Black', Arial, sans-serif" font-weight="900" 
+        font-size="36" fill="url(#grad1)" letter-spacing="-1">AI</text>
+  <text x="130" y="85" font-family="Arial, sans-serif" font-weight="700" 
+        font-size="20" fill="#F5F5F7" letter-spacing="6">FACTORY</text>
+
+  <!-- Tagline -->
+  <text x="130" y="105" font-family="Arial, sans-serif" font-weight="400" 
+        font-size="10" fill="#4F8EF7" letter-spacing="2" opacity="0.7">AI VIDEO PRODUCTION</text>
+
+  <!-- Vertical divider -->
+  <line x1="118" y1="25" x2="118" y2="95" stroke="#4F8EF7" stroke-width="1" stroke-opacity="0.3"/>
+</svg>
